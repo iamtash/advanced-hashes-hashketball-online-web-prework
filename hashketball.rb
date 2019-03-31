@@ -202,7 +202,9 @@ def most_points_scored
 
     players_data = game_hash.map {|location, team_data|
       game_hash[location][:players]}
+      binding.pry
     players_data_merged = players_data[0].merge(players_data[1])
+    binding.pry
 
     players_data_merged.map {|player, data|
       return player if data[:points] == most_points
